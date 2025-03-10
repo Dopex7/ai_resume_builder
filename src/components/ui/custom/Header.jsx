@@ -13,7 +13,7 @@ function Header() {
           <Link to={'/dashboard'}>
           <Button variant="outline" className="cursor-pointer">Dashboard</Button>
           </Link>
-          <UserButton /> // asdas
+          <UserButton /> 
         </div> :
       
         <Link to={'/auth/sign-in'}>
