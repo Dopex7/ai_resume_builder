@@ -4,6 +4,54 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@media print{
+  #no-print{
+    display: none;
+  }
+
+  #print-area{
+    display: block;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+@page{
+  size: auto;
+  margin: 0mm;
+}
+
+
+
+.rsw-ce ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.rsw-ce ol {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+.experience-preview ul {
+  list-style: disc; /* Ensures bullet points show */
+  padding-left: 1.5em;
+}
+
+.experience-preview ol {
+  list-style: decimal; /* Ensures numbered lists show */
+  padding-left: 1.5em;
+}
+
+.experience-preview li {
+  margin-bottom: 5px; /* Adds spacing between list items */
+}
+
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -11,7 +59,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(32.98% 0.0273 231.72);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -112,6 +160,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @layer base {
