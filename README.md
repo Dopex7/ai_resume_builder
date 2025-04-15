@@ -16,33 +16,17 @@ Built using **React**, **Vite**, **Tailwind CSS**, and integrates with **Strapi*
 - 🌐 AI integration via Hugging Face (job description generation)
 
 ---
+🔧 Technologies Used
+React
 
-## 🗂️ Project Structure
+Vite
 
-ai_resume_builder/ ├── public/ # Static assets ├── service/ # API and helper functions ├── src/ # Main frontend code │ ├── components/ # Reusable UI components │ └── App.jsx # Root component ├── .gitignore ├── package.json ├── vite.config.js └── README.md
+Tailwind CSS
 
-yaml
-Copy
-Edit
+Strapi (Backend)
 
----
+Clerk (Authentication)
 
-## 🚀 Getting Started
+Hugging Face API (AI job description generator)
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Dopex7/ai_resume_builder.git
-cd ai_resume_builder
-2. Install Dependencies
-bash
-Copy
-Edit
-npm install
-3. Run the App
-bash
-Copy
-Edit
-npm run dev
-App will be available at: [
 
