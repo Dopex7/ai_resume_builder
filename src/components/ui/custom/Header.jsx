@@ -15,10 +15,10 @@ function Header() {
            <Link to={'/dashboard'}>
                <Button variant="outline" className='cursor-pointer' >Dashboard</Button>
            </Link>
-           <UserButton />
+           <UserButton width={40} appearance={{elements:{userButtonAvatarBox:{width:40,height:40}}}}/>
        </div> :
        <Link to={'/auth/sign-in'}>
-           <Button>Get Started</Button>
+           <Button className={'cursor-pointer'}>Sign In</Button>
        </Link>
    }
 

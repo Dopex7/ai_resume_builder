@@ -13,9 +13,7 @@ function Dashboard() {
   },[user])
 
 
-  /**
-   * Used to get users resume list []
-   */
+
 const GetResumesList=()=>{
   GlobalApi.getUserResumes(user?.primaryEmailAddress?.emailAddress).then(resp=>{
     setResumeList(resp.data.data);

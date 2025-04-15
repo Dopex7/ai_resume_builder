@@ -15,7 +15,7 @@ import {
     Toolbar,
 } from 'react-simple-wysiwyg';
 import { toast } from 'sonner';
-import { AIChatSession } from './../../../../service/AIModel'; // Import the AI function
+import { AIChatSession } from './../../../../service/AIModel'; 
 import { ResumeInfoContext } from '@/context/ResumeInfoContext';
 
 function RichTextEditor({ onRichTextEditorChange, index, defaultValue }) {
@@ -29,28 +29,24 @@ function RichTextEditor({ onRichTextEditorChange, index, defaultValue }) {
             return;
         }
     
-        // Define the prompt for generating bullet points in HTML format
         const prompt = `position titile: ${resumeInfo.experience[index].title}. Depends on position title give me 3-4 bullet points for my experience in resume (Please do not add experince level and make it just normal text), give me result in normal text.`;
     
         try {
-            setLoading(true); // Show loading state
-            const response = await AIChatSession(prompt, 'html'); // Request HTML format
-            console.log('Raw AI Response:', response); // Log the raw response
+            setLoading(true); 
+            const response = await AIChatSession(prompt, 'html'); 
+            console.log('Raw AI Response:', response);
     
-            // Remove the prompt and any additional text from the response
             const cleanResponse = response
-            .replace(new RegExp(prompt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '') // Escape special characters in the prompt
-            .replace(/As брvozamn/, '') // Remove unwanted text
-            .trim(); // Keep bullet points
+            .replace(new RegExp(prompt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '')
+            .replace(/As брvozamn/, '') 
+            .trim(); 
         
         
     
-            console.log('Cleaned AI Response:', cleanResponse); // Log the cleaned response
+            console.log('Cleaned AI Response:', cleanResponse); 
     
-            // Update the editor value with the cleaned HTML response
             setValue(cleanResponse);
     
-            // Notify parent component
             if (onRichTextEditorChange) {
                 onRichTextEditorChange({ target: { value: cleanResponse } });
             }
@@ -58,7 +54,7 @@ function RichTextEditor({ onRichTextEditorChange, index, defaultValue }) {
             console.error('Failed to generate bullet points:', error);
             toast.error('Failed to generate bullet points. Please try again.');
         } finally {
-            setLoading(false); // Hide loading state
+            setLoading(false); 
         }
     };
     return (
@@ -70,8 +66,8 @@ function RichTextEditor({ onRichTextEditorChange, index, defaultValue }) {
                         variant='outline'
                         disabled={loading}
                         size='sm'
-                        className='flex gap-2 border-primary text-primary'
-                        onClick={GenerateFromAI} // Trigger the AI function
+                        className='flex gap-2 border-primary text-primary cursor-pointer'
+                        onClick={GenerateFromAI} 
                     >
                          {loading?
                       <LoaderCircle className='animate-spin'/>:  

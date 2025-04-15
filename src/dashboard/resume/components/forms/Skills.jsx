@@ -85,8 +85,8 @@ function Skills() {
     </div>
     <div className='flex justify-between'>
             <div className='flex gap-2'>
-            <Button variant="outline" onClick={AddNewSkills} className="text-primary"> + Add More Skill</Button>
-            <Button variant="outline" onClick={RemoveSkills} className="text-primary"> - Remove</Button>
+            <Button variant="outline" onClick={AddNewSkills} className="text-primary cursor-pointer"> + Add More Skill</Button>
+            <Button variant="outline" onClick={RemoveSkills} className="text-primary cursor-pointer"> - Remove</Button>
 
             </div>
             <Button disabled={loading} className='cursor-pointer' onClick={()=>onSave()}>

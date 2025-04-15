@@ -27,22 +27,19 @@ export const AIChatSession = async (prompt, format = 'json') => {
     }
 
     const data = await response.json();
-    console.log("Raw API Response:", data); // Log the raw response
+    console.log("Raw API Response:", data); 
 
     if (!data || !data[0]?.generated_text) return "No response available";
 
-    // Handle response based on the specified format
     if (format === 'html') {
-      // Return the raw generated text for HTML
       return data[0].generated_text;
     } else if (format === 'json') {
-      // Extract and parse JSON for JSON format
       const jsonMatch = data[0].generated_text.match(/\[.*\]/s);
       if (!jsonMatch) {
-        console.error("Generated Text:", data[0].generated_text); // Log the generated text
+        console.error("Generated Text:", data[0].generated_text); 
         throw new Error("Invalid JSON response format");
       }
-      return JSON.parse(jsonMatch[0]); // Parse only the extracted JSON
+      return JSON.parse(jsonMatch[0]); 
     } else {
       throw new Error("Invalid format specified. Use 'html' or 'json'.");
     }

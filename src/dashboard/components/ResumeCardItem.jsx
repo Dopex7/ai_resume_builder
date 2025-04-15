@@ -69,14 +69,14 @@ function ResumeCardItem({resume, refreshData}) {
          style={{
           background:resume?.themeColor
         }}>
-          <h2 className='text-sm'>{resume.title}</h2> 
-          <DropdownMenu>
+    <h2 className='text-sm font-semibold text-black hover:text-white'>{resume.title}</h2>
+<DropdownMenu>
   <DropdownMenuTrigger> <MoreVertical className='h-4 w-4 cursor-pointer'/>  </DropdownMenuTrigger>
   <DropdownMenuContent>
-    <DropdownMenuItem onClick={()=>navigation('/dashboard/resume/'+resume.documentId+"/edit")}> Edit</DropdownMenuItem>
-    <DropdownMenuItem onClick={()=>navigation('/my-resume/'+resume.documentId+"/view")}>View</DropdownMenuItem>
-    <DropdownMenuItem onClick={()=>navigation('/my-resume/'+resume.documentId+"/view")}>Download</DropdownMenuItem>
-    <DropdownMenuItem onClick={()=>setOpenAlert(true)}>Delete</DropdownMenuItem>
+    <DropdownMenuItem className="cursor-pointer" onClick={()=>navigation('/dashboard/resume/'+resume.documentId+"/edit")}> Edit</DropdownMenuItem>
+    <DropdownMenuItem className="cursor-pointer" onClick={()=>navigation('/my-resume/'+resume.documentId+"/view")}>View</DropdownMenuItem>
+    <DropdownMenuItem className="cursor-pointer" onClick={()=>navigation('/my-resume/'+resume.documentId+"/view")}>Download</DropdownMenuItem>
+    <DropdownMenuItem className="cursor-pointer" onClick={()=>setOpenAlert(true)}>Delete</DropdownMenuItem>
   </DropdownMenuContent>
 </DropdownMenu>
 

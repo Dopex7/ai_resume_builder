@@ -129,8 +129,8 @@ function Education() {
     </div>
     <div className='flex justify-between'>
             <div className='flex gap-2'>
-            <Button variant="outline" onClick={AddNewEducation} className="text-primary"> + Add More Education</Button>
-            <Button variant="outline" onClick={RemoveEducation} className="text-primary"> - Remove</Button>
+            <Button variant="outline" onClick={AddNewEducation} className="text-primary cursor-pointer"> + Add More Education</Button>
+            <Button variant="outline" onClick={RemoveEducation} className="text-primary cursor-pointer"> - Remove</Button>
 
             </div>
             <Button disabled={loading} className='cursor-pointer' onClick={()=>onSave()}>

@@ -33,7 +33,7 @@ function ViewResume() {
             <h2 className='text-center text-2xl font-medium'>Congrats! Your Beutiful AI Generated Resume is Finished</h2>
             <p className='text-center text-gray-400'>Now You Are Ready to download your resume you can share it</p>
             <div className='flex justify-between px-44 my-10'>
-                <Button onClick={HandleDownload}>Download</Button>
+                <Button onClick={HandleDownload} className={'cursor-pointer'}>Download</Button>
                 <RWebShare
         data={{
           text: "Hello Everyone, This is my new resume open to see it ",
@@ -41,7 +41,7 @@ function ViewResume() {
           title: resumeInfo?.firstName+" "+resumeInfo?.lastName+" Resume",
         }}
         onClick={() => console.log("shared successfully!")} >                
-        <Button>Share</Button>
+        <Button className={'cursor-pointer'}>Share</Button>
                 </RWebShare>
 
             </div>

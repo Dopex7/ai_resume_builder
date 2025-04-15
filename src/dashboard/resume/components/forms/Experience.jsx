@@ -151,8 +151,8 @@ function Experience() {
         </div>
         <div className='flex justify-between'>
             <div className='flex gap-2'>
-            <Button variant="outline" onClick={AddNewExperience} className="text-primary"> + Add More Experience</Button>
-            <Button variant="outline" onClick={RemoveExperience} className="text-primary"> - Remove</Button>
+            <Button variant="outline" onClick={AddNewExperience} className="text-primary cursor-pointer"> + Add More Experience</Button>
+            <Button variant="outline" onClick={RemoveExperience} className="text-primary cursor-pointer"> - Remove</Button>
 
             </div>
             <Button className='cursor-pointer' disabled={loading} onClick={()=>onSave()}>
