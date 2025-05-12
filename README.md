@@ -1,32 +1,36 @@
-# 🧠 AI Resume Builder
+# 🧠 AI Resume Builder  
 
-> A sleek and modern AI-powered resume builder that helps users create professional resumes with ease.
+> **Build interview-ready resumes in minutes** with AI-powered customization. Perfect for students seeking internships!  
 
-Built using **React**, **Vite**, **Tailwind CSS**, and integrates with **Strapi** and **Clerk** for backend and authentication.
+![Build Your Resume With AI](https://i.imgur.com/kj8nXm5.png)  
+
+**Why this project?**  
+This tool solves a **real pain point**: crafting resumes that pass ATS screening and impress recruiters. It combines:  
+- **AI-driven content generation** (Hugging Face)  
+- **Modern full-stack architecture** (React + Strapi)  
+- **Secure authentication** (Clerk)
+
+---
+
+## ✨ **Key Features**  
+✅ **AI-Powered Resume Writing** – Generates tailored content based on skills/goals.  
+✅ **ATS Optimization** – Formats resumes to beat automated filters.  
+✅ **Real-Time Editing** – Modular React components for easy customization.  
+✅ **Secure & Scalable** – Clerk for auth, Strapi for backend.  
 
 ---
 
-## ✨ Features
-
-- ⚡️ Fast and responsive UI with Vite + React
-- 🧩 Modular component structure
-- 🛠️ Built-in service layer for clean data handling
-- 🎨 Tailwind CSS for styling
-- 🔐 Authentication via Clerk
-- 🌐 AI integration via Hugging Face (job description generation)
+## 🛠️ **Tech Stack**  
+| **Frontend**       | **Backend**   | **AI/APIs**       | **Infra**       |  
+|---------------------|---------------|-------------------|-----------------|  
+| React + Vite        | Strapi (CMS)  | Hugging Face API  | Vercel/Netlify  |  
+| Tailwind CSS        | PostgreSQL    | Job Description AI| Cloudinary (CDN)|  
+| Framer Motion (UI)  |               |                   | Clerk (Auth)    |  
 
 ---
-🔧 Technologies Used
-React
-
-Vite
-
-Tailwind CSS
-
-Strapi (Backend)
-
-Clerk (Authentication)
-
-Hugging Face API (AI job description generator)
 
 
+## 🚀 **Quick Start**  
+1. Clone repo:  
+   ```bash  
+   git clone https://github.com/Dopex7/ai_resume_builder.git  
